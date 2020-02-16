@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/ben/git/BiomesOPlenty'
+let g:netrw_dirhist_1='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty/api/biome'
+let g:netrw_dirhist_0='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty/api'
+let g:netrw_dirhist_9='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty'
+let g:netrw_dirhist_8='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty/common'
+let g:netrw_dirhist_7='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty/common/biome'
+let g:netrw_dirhist_6='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty/common/biome/overworld'
+let g:netrw_dirhist_5='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty/common/biome'
+let g:netrw_dirhist_4='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty/common'
+let g:netrw_dirhist_3='/home/ben/git/BiomesOPlenty/src/main/java/biomesoplenty'
