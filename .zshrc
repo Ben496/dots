@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 #alias cmake8="cmake -D CMAKE_C_COMPILER=gcc-8 -D CMAKE_CXX_COMPILER=g++-8"
 alias subl="/opt/sublime_text/sublime_text"
 alias pwdwinetricks="WINEPREFIX=`pwd` winetricks"
+alias pymanage="python manage.py"
 
 # History
 setopt nosharehistory
