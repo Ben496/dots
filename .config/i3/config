@@ -171,16 +171,18 @@ exec_always --no-startup-id dropbox start
 exec_always --no-startup-id killall -q polybar; polybar i3wm
 
 # run once at startup
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id nm-applet
+exec --no-startup-id dunst
 
 # authentication
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 
 
 # application keyboard shortcuts
 
-# bindsym $mod+e exec --no-startup-id al-open -edit
-bindsym Mod1+d exec --no-startup-id dmenu_run
+bindsym $mod+Shift+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+Shift+w exec --no-startup-id firefox
@@ -255,7 +257,7 @@ bindsym $mod+X mode "$mode_system"
 
 set $mode_system  Q ➤ Lock  W ➤ Logout  E ➤ Reboot  R ➤ Shutdown  T ➤ Hibernate
 mode "$mode_system" {
-    bindsym q exec --no-startup-id i3lock-fancy -- scrot, mode "default"
+    bindsym q exec --no-startup-id i3lock-fancy, mode "default"
     bindsym w exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
     bindsym e exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
     bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
