@@ -16,6 +16,11 @@ focus_follows_mouse no
 
 
 
+# Window title alignment
+title_align center
+
+
+
 # Font
 font pango:Source Code Pro 8
 
@@ -147,11 +152,13 @@ default_orientation horizontal
 # container layout
 bindsym $mod+b split h
 bindsym $mod+v split v
+bindsym $mod+s exec --no-startup-id "~/.config/i3/stacked.sh"
+bindsym $mod+t exec --no-startup-id "~/.config/i3/tabbed.sh"
 bindsym $mod+Shift+t layout tabbed
-bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+s layout stacked
 bindsym $mod+Shift+b layout splith
 bindsym $mod+Shift+v layout splitv
-bindsym $mod+Shift+g gaps horizontal current toggle 600
+bindsym $mod+Shift+g gaps horizontal current toggle 300
 
 # switch between tiling / floating
 bindsym $mod+space focus mode_toggle
@@ -221,7 +228,7 @@ for_window [class="lxqt-config"] floating enable
 
 
 
-# audio settings
+# laptop settings
 
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
@@ -232,6 +239,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
 bindsym XF86AudioMute exec --no-startup-id pamixer -t
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
+bindsym XF86TouchpadToggle exec --no-startup-id ~/.config/i3/toggle_touchpad.sh
 
 
 
@@ -258,9 +266,9 @@ bindsym $mod+X mode "$mode_system"
 set $mode_system  Q ➤ Lock  W ➤ Logout  E ➤ Reboot  R ➤ Shutdown  T ➤ Hibernate
 mode "$mode_system" {
     bindsym q exec --no-startup-id i3lock-fancy, mode "default"
-    bindsym w exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
-    bindsym e exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
-    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+    bindsym w exec --no-startup-id i3-msg exit, mode "default"
+    bindsym e exec --no-startup-id systemctl reboot, mode "default"
+    bindsym r exec --no-startup-id systemctl shutdown, mode "default"
     bindsym t exec --no-startup-id systemctl hibernate, mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
