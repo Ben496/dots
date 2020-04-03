@@ -109,10 +109,3 @@ nnoremap <space> za
 nnoremap <C-q> :set textwidth=80<cr>
 nnoremap <C-s> :set textwidth=0<cr>
 " }}}
-
-" Vimscript folding {{{
-augroup filetype_vim
-	autocmd!
-	autocmd FileType vim setlocal foldmethod=marker
-augroup END
-" }}}
