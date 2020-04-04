@@ -36,6 +36,7 @@ set termguicolors
 " My options {{{1
 set path+=** " add current directory tree to search path
 set wildignore+=**/.git/**,**/node_modules/** " ignore these directories in path
+set scrolloff=6
 set smartindent
 set number
 set relativenumber
