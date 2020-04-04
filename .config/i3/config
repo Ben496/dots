@@ -50,30 +50,76 @@ set $s_right o
 
 
 # Define Workspaces and screens
+set $ws01 1:1: 
+set $ws02 2:2: 
+set $ws03 3:3: 
+set $ws04 4:4: 
+set $ws05 5:5: 
+set $ws06 6:6: 
+set $ws07 7:7: 
+set $ws08 8:8: 
+set $ws09 9:9: 
+set $ws10 10:0: 
+set $ws11 11:F1: 
+set $ws12 12:F2: 
+set $ws13 13:F3: 
+set $ws14 14:F4: 
+set $ws15 15:F5: 
+set $ws16 16:F6: 
+set $ws17 17:F7: 
+set $ws18 18:F8: 
+set $ws19 19:F9: 
+set $ws20 20:F10: 
+set $ws21 21:F11: 
+set $ws22 22:F12: 
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $ws01
+bindsym $mod+2 workspace $ws02
+bindsym $mod+3 workspace $ws03
+bindsym $mod+4 workspace $ws04
+bindsym $mod+5 workspace $ws05
+bindsym $mod+6 workspace $ws06
+bindsym $mod+7 workspace $ws07
+bindsym $mod+8 workspace $ws08
+bindsym $mod+9 workspace $ws09
+bindsym $mod+0 workspace $ws10
+bindsym $mod+F1 workspace $ws11
+bindsym $mod+F2 workspace $ws12
+bindsym $mod+F3 workspace $ws13
+bindsym $mod+F4 workspace $ws14
+bindsym $mod+F5 workspace $ws15
+bindsym $mod+F6 workspace $ws16
+bindsym $mod+F7 workspace $ws17
+bindsym $mod+F8 workspace $ws18
+bindsym $mod+F9 workspace $ws19
+bindsym $mod+F10 workspace $ws20
+bindsym $mod+F11 workspace $ws21
+bindsym $mod+F12 workspace $ws22
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1; workspace 1
-bindsym $mod+Shift+2 move container to workspace 2; workspace 2
-bindsym $mod+Shift+3 move container to workspace 3; workspace 3
-bindsym $mod+Shift+4 move container to workspace 4; workspace 4
-bindsym $mod+Shift+5 move container to workspace 5; workspace 5
-bindsym $mod+Shift+6 move container to workspace 6; workspace 6
-bindsym $mod+Shift+7 move container to workspace 7; workspace 7
-bindsym $mod+Shift+8 move container to workspace 8; workspace 8
-bindsym $mod+Shift+9 move container to workspace 9; workspace 9
-bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+bindsym $mod+Shift+1 move container to workspace $ws01; workspace $ws01
+bindsym $mod+Shift+2 move container to workspace $ws02; workspace $ws02
+bindsym $mod+Shift+3 move container to workspace $ws03; workspace $ws03
+bindsym $mod+Shift+4 move container to workspace $ws04; workspace $ws04
+bindsym $mod+Shift+5 move container to workspace $ws05; workspace $ws05
+bindsym $mod+Shift+6 move container to workspace $ws06; workspace $ws06
+bindsym $mod+Shift+7 move container to workspace $ws07; workspace $ws07
+bindsym $mod+Shift+8 move container to workspace $ws08; workspace $ws08
+bindsym $mod+Shift+9 move container to workspace $ws09; workspace $ws09
+bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
+bindsym $mod+Shift+F1 move container to workspace $ws11; workspace $ws11
+bindsym $mod+Shift+F2 move container to workspace $ws12; workspace $ws12
+bindsym $mod+Shift+F3 move container to workspace $ws13; workspace $ws13
+bindsym $mod+Shift+F4 move container to workspace $ws14; workspace $ws14
+bindsym $mod+Shift+F5 move container to workspace $ws15; workspace $ws15
+bindsym $mod+Shift+F6 move container to workspace $ws16; workspace $ws16
+bindsym $mod+Shift+F7 move container to workspace $ws17; workspace $ws17
+bindsym $mod+Shift+F8 move container to workspace $ws18; workspace $ws18
+bindsym $mod+Shift+F9 move container to workspace $ws19; workspace $ws19
+bindsym $mod+Shift+F10 move container to workspace $ws20; workspace $ws20
+bindsym $mod+Shift+F11 move container to workspace $ws21; workspace $ws21
+bindsym $mod+Shift+F12 move container to workspace $ws22; workspace $ws22
 
 # move workspace to different display
 bindsym $mod+Shift+y move workspace to output left
