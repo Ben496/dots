@@ -271,6 +271,9 @@ for_window [class="Eom"] floating enable
 for_window [class="Galculator"] floating enable
 for_window [title="Blender User Preferences"] floating enable
 for_window [class="lxqt-config"] floating enable
+assign [class="electron-mail"] $ws09
+assign [class="Thunderbird"] $ws09
+assign [class="discord"] $ws10
 
 
 
