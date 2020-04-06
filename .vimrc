@@ -22,6 +22,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'joshdick/onedark.vim'
 Plugin 'DougBeney/pickachu'
 Plugin 'zxqfl/tabnine-vim'
+Plugin 'mcchrish/nnn.vim'
+Plugin 'ap/vim-css-color'
 "Plugin 'Valloric/YouCompleteMe'
 " }}}
 
