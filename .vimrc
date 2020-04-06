@@ -43,6 +43,7 @@ set smartindent
 set number
 set relativenumber
 set hid
+set mouse=a
 set ignorecase " ignore case be default when searching
 filetype plugin on " required for vimwiki
 syntax on
