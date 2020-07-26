@@ -127,6 +127,8 @@ colors:
   primary:
     background: '0x000000'
     foreground: '0xeaeaea'
+    #foreground: '0x000000'
+    #background: '0xeaeaea'
 
     # Bright and dim foreground colors
     #
