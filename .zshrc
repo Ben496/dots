@@ -1,3 +1,5 @@
+# Set editor
+export EDITOR=nvim
 # Prompt
 autoload -U colors && colors
 export PS1="%{$fg_bold[red]%}%25<...<%~%<< > %{$reset_color%}"
