@@ -54,9 +54,9 @@ set $ws01 1:1: 
 set $ws02 2:2: 
 set $ws03 3:3: 
 set $ws04 4:4: 
-set $ws05 5:5: 
-set $ws06 6:6: 
-set $ws07 7:7: 
+set $ws05 5:5: 
+set $ws06 6:6: 
+set $ws07 7:7: 
 set $ws08 8:8: 
 set $ws09 9:9: 
 set $ws10 10:0: 
@@ -126,6 +126,9 @@ bindsym $mod+Shift+y move workspace to output left
 bindsym $mod+Shift+u move workspace to output down
 bindsym $mod+Shift+i move workspace to output up
 bindsym $mod+Shift+o move workspace to output right
+
+# Defult layout for new containers
+#workspace_layout tabbed
 
 
 
@@ -222,9 +225,10 @@ bindsym $mod+a focus parent
 # scripts & settings
 exec_always --no-startup-id dropbox start
 exec_always --no-startup-id killall -q polybar; polybar i3wm
+#exec_always --no-startup-id killall -q picom; picom
+exec_always --no-startup-id feh --bg-scale /home/ben/nextcloud/pictures/wallpapers/wallhaven-96w8e8.png
 
 # run once at startup
-exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 
@@ -271,9 +275,13 @@ for_window [class="Eom"] floating enable
 for_window [class="Galculator"] floating enable
 for_window [title="Blender User Preferences"] floating enable
 for_window [class="lxqt-config"] floating enable
+for_window [class="helloworld"] floating enable
+for_window [class="Pithos"] floating enable
 assign [class="electron-mail"] $ws09
 assign [class="Thunderbird"] $ws09
 assign [class="discord"] $ws10
+assign [class="calibre"] $ws06
+assign [class="Pithos"] $ws11
 
 
 
@@ -317,7 +325,7 @@ mode "$mode_system" {
     bindsym q exec --no-startup-id i3lock-fancy, mode "default"
     bindsym w exec --no-startup-id i3-msg exit, mode "default"
     bindsym e exec --no-startup-id systemctl reboot, mode "default"
-    bindsym r exec --no-startup-id systemctl shutdown, mode "default"
+    bindsym r exec --no-startup-id shutdown 0, mode "default"
     bindsym t exec --no-startup-id systemctl hibernate, mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
