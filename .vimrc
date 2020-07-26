@@ -20,6 +20,7 @@ Plugin 'machakann/vim-sandwich'
 Plugin 'vimwiki/vimwiki'
 Plugin 'vim-airline/vim-airline'
 Plugin 'joshdick/onedark.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'DougBeney/pickachu'
 Plugin 'zxqfl/tabnine-vim'
 Plugin 'mcchrish/nnn.vim'
@@ -36,6 +37,9 @@ set termguicolors
 " }}}
 
 " My options {{{1
+set expandtab
+set softtabstop=4
+set shiftwidth=4
 set path+=** " add current directory tree to search path
 set wildignore+=**/.git/**,**/node_modules/** " ignore these directories in path
 set scrolloff=6
@@ -47,12 +51,17 @@ set mouse=a
 set ignorecase " ignore case be default when searching
 filetype plugin on " required for vimwiki
 syntax on
-colorscheme onedark
+let g:gruvbox_contrast_dark="hard"
+let g:gruvbox_contrast_light="hard"
+colorscheme gruvbox
+set background=dark
 set cursorline
 set colorcolumn=80
 highlight colorcolumn ctermbg=black
 highlight cursorline cterm=NONE ctermbg=black "ctermfg=darkred
 let g:gitgutter_enabled = 1
+let g:ycm_key_list_select_completion = ['<Down>'] " override tab for selecting completion (tabnine/youcompleteme)
+let g:ycm_key_list_previous_completion = ['<Up>'] " override tab for selecting previous completion (tabnine/youcompleteme)
 "let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 " }}}
 
@@ -81,18 +90,18 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 " move windows from any mode
-:tnoremap <A-H> <C-\><C-N><C-w>H
-:tnoremap <A-J> <C-\><C-N><C-w>J
-:tnoremap <A-K> <C-\><C-N><C-w>K
-:tnoremap <A-L> <C-\><C-N><C-w>L
-:inoremap <A-H> <C-\><C-N><C-w>H
-:inoremap <A-J> <C-\><C-N><C-w>J
-:inoremap <A-K> <C-\><C-N><C-w>K
-:inoremap <A-L> <C-\><C-N><C-w>L
-:nnoremap <A-H> <C-w>H
-:nnoremap <A-J> <C-w>J
-:nnoremap <A-K> <C-w>K
-:nnoremap <A-L> <C-w>L
+tnoremap <A-H> <C-\><C-N><C-w>H
+tnoremap <A-J> <C-\><C-N><C-w>J
+tnoremap <A-K> <C-\><C-N><C-w>K
+tnoremap <A-L> <C-\><C-N><C-w>L
+inoremap <A-H> <C-\><C-N><C-w>H
+inoremap <A-J> <C-\><C-N><C-w>J
+inoremap <A-K> <C-\><C-N><C-w>K
+inoremap <A-L> <C-\><C-N><C-w>L
+nnoremap <A-H> <C-w>H
+nnoremap <A-J> <C-w>J
+nnoremap <A-K> <C-w>K
+nnoremap <A-L> <C-w>L
 " }}}
 
 " shortcut to escape terminal mode easier
