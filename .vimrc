@@ -45,7 +45,7 @@ set wildignore+=**/.git/**,**/node_modules/** " ignore these directories in path
 set scrolloff=6
 set smartindent
 set number
-set relativenumber
+"set relativenumber
 set hid
 set mouse=a
 set ignorecase " ignore case be default when searching
