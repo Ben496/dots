@@ -26,6 +26,11 @@ font pango:Source Code Pro 8
 
 
 
+# Show marks
+show_marks yes
+
+
+
 # Define variables
 
 # set Super or Alt key
@@ -60,7 +65,7 @@ set $ws07 7:7: 
 set $ws08 8:8: 
 set $ws09 9:9: 
 set $ws10 10:0: 
-set $ws11 11:F1: 
+set $ws11 11:F1: 
 set $ws12 12:F2: 
 set $ws13 13:F3: 
 set $ws14 14:F4: 
@@ -212,6 +217,13 @@ bindsym $mod+Shift+g gaps horizontal current toggle 300
 # switch between tiling / floating
 bindsym $mod+space focus mode_toggle
 
+# scratchpad
+bindsym $mod+z scratchpad show
+bindsym $mod+n [title="scratchpad_htop"] scratchpad show
+bindsym $mod+m [class="Pithos"] scratchpad show
+bindsym $mod+Shift+z move scratchpad
+
+
 # focus the parent container
 bindsym $mod+a focus parent
 
@@ -221,12 +233,13 @@ bindsym $mod+a focus parent
 
 
 # Autostart applications
+exec_always --no-startup-id pkill nextcloud; nextcloud
 
 # scripts & settings
 exec_always --no-startup-id dropbox start
 exec_always --no-startup-id killall -q polybar; polybar i3wm
 exec_always --no-startup-id pkill dunst; dunst
-#exec_always --no-startup-id killall -q picom; picom
+#exec_always --no-startup-id pkill picom; picom
 exec_always --no-startup-id feh --bg-scale /home/ben/nextcloud/pictures/wallpapers/wallhaven-96w8e8.png
 
 # run once at startup
@@ -245,6 +258,7 @@ bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+Shift+w exec --no-startup-id firefox
 bindsym $mod+Control+w exec --no-startup-id qutebrowser
 bindsym $mod+Shift+f exec --no-startup-id nemo
+bindsym $mod+Delete exec --no-startup-id $term -t scratchpad_htop -e htop
 
 # screenshots
 bindsym Print exec --no-startup-id spectacle -m
@@ -277,11 +291,11 @@ for_window [title="Blender User Preferences"] floating enable
 for_window [class="lxqt-config"] floating enable
 for_window [class="helloworld"] floating enable
 for_window [class="Pithos"] floating enable
+for_window [title="scratchpad_htop"] move scratchpad, scratchpad show
 assign [class="electron-mail"] $ws09
 assign [class="Thunderbird"] $ws09
 assign [class="discord"] $ws10
 assign [class="calibre"] $ws06
-assign [class="Pithos"] $ws11
 
 
 
