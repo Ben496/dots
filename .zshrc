@@ -33,7 +33,6 @@ setopt nosharehistory
 alias ls="ls --color=auto"
 alias subl="/opt/sublime_text/sublime_text"
 alias pwdwinetricks="WINEPREFIX=`pwd` winetricks"
-alias pymanage="python manage.py"
 alias e="exa"
 
 # Custom gcc
