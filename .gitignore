@@ -1,0 +1,3 @@
+# Ignore extensions for template-config templating
+*.tags
+*.out
