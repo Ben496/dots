@@ -35,3 +35,7 @@ install_nvim: install_vim
 	${info Installing nvim config files}
 	mkdir -p ${HOME}/.config/nvim
 	ln -s ${PWD}/.config/nvim/init.vim ${HOME}/.config/nvim/init.vim
+
+install_zsh:
+	${info Installing zsh config files}
+	ln -s ${PWD}/.zshrc ${HOME}/.zshrc
