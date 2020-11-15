@@ -13,3 +13,11 @@ install_i3: i3
 	ln -s ${PWD}/.config/i3/tabbed.sh ${HOME}/.config/i3/tabbed.sh
 	ln -s ${PWD}/.config/i3/toggle_touchpad.sh ${HOME}/.config/i3/toggle_touchpad.sh
 
+polybar:
+	${info Rendering polybar config}
+	template-config ./.config/polybar/config
+
+install_polybar: polybar
+	${info Installing polybar config files}
+	mkdir -p ${HOME}/.config/polybar
+	ln -s ${PWD}/.config/polybar/config.out ${HOME}/.config/polybar/config
