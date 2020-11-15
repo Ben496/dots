@@ -21,3 +21,8 @@ install_polybar: polybar
 	${info Installing polybar config files}
 	mkdir -p ${HOME}/.config/polybar
 	ln -s ${PWD}/.config/polybar/config.out ${HOME}/.config/polybar/config
+
+install_alacritty:
+	${info Installing alacritty config files}
+	mkdir -p ${HOME}/.config/alacritty
+	ln -s ${PWD}/.config/alacritty/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
