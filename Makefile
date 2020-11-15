@@ -26,3 +26,12 @@ install_alacritty:
 	${info Installing alacritty config files}
 	mkdir -p ${HOME}/.config/alacritty
 	ln -s ${PWD}/.config/alacritty/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
+
+install_vim:
+	${info Installing vim config files}
+	ln -s ${PWD}/.vimrc ${HOME}/.vimrc
+
+install_nvim: install_vim
+	${info Installing nvim config files}
+	mkdir -p ${HOME}/.config/nvim
+	ln -s ${PWD}/.config/nvim/init.vim ${HOME}/.config/nvim/init.vim
