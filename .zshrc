@@ -3,7 +3,7 @@ export EDITOR=nvim
 
 export ZSH=$HOME/.ohmyzsh
 ZSH_THEME="agnoster"
-plugins=(git)
+plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Prompt
