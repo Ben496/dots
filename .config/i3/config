@@ -285,13 +285,13 @@ exec_always --no-startup-id xset -dpms
 
 for_window [class="qt5ct|Lxappearance|^Gpick$|Pamac|Peek|Nitrogen"] floating enable
 for_window [window_role="^Preferences$"] floating enable
-for_window [class="Eom"] floating enable
-for_window [class="Galculator"] floating enable
-for_window [title="Blender User Preferences"] floating enable
-for_window [class="lxqt-config"] floating enable
-for_window [class="helloworld"] floating enable
-for_window [class="Pithos"] floating enable
-for_window [title="scratchpad_htop"] move scratchpad, scratchpad show
+for_window [class="^Eom"] floating enable
+for_window [class="^Galculator"] floating enable
+for_window [title="^Blender User Preferences"] floating enable
+for_window [class="^lxqt-config"] floating enable
+for_window [class="^helloworld"] floating enable
+for_window [class="^Pithos"] floating enable
+for_window [title="^scratchpad_htop"] move scratchpad, scratchpad show
 assign [class="electron-mail"] $ws09
 assign [class="Thunderbird"] $ws09
 assign [class="discord"] $ws10
