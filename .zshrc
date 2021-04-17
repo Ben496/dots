@@ -49,6 +49,9 @@ export PATH=~/Android/Sdk/platform-tools:$PATH
 # Cargo bin
 export PATH=~/.cargo/bin:$PATH
 
+# Yarn bin
+export PATH=~/.yarn/bin:$PATH
+
 # Nix
 if [ -e /home/ben/.nix-profile/etc/profile.d/nix.sh ]; then . /home/ben/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
