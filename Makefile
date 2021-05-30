@@ -1,7 +1,7 @@
 default:
 	${warn Specify an install target}
 
-install: install_i3 install_polybar install_alacritty install_vim install_nvim install_zsh
+install: install_i3 install_polybar symlink_alacritty symlink_vim symlink_nvim symlink_zsh
 
 i3:
 	${info Rendering i3 config}
@@ -24,20 +24,20 @@ install_polybar: polybar
 	mkdir -p ${HOME}/.config/polybar
 	install -m 644 ${PWD}/.config/polybar/config.out ${HOME}/.config/polybar/config
 
-install_alacritty:
-	${info Installing alacritty config files}
+symlink_alacritty:
+	${info Symlinking alacritty config files}
 	mkdir -p ${HOME}/.config/alacritty
-	install -m 644 ${PWD}/.config/alacritty/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
+	ln -sf ${PWD}/.config/alacritty/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
 
-install_vim:
-	${info Installing vim config files}
-	install -m 644 ${PWD}/.vimrc ${HOME}/.vimrc
+symlink_vim:
+	${info Symlinking vim config files}
+	ln -sf ${PWD}/.vimrc ${HOME}/.vimrc
 
-install_nvim: install_vim
-	${info Installing nvim config files}
+symlink_nvim: symlink_vim
+	${info Symlinking nvim config files}
 	mkdir -p ${HOME}/.config/nvim
-	install -m 644 ${PWD}/.config/nvim/init.vim ${HOME}/.config/nvim/init.vim
+	ln -sf ${PWD}/.config/nvim/init.vim ${HOME}/.config/nvim/init.vim
 
-install_zsh:
-	${info Installing zsh config files}
-	install -m 644 ${PWD}/.zshrc ${HOME}/.zshrc
+symlink_zsh:
+	${info Symlinking zsh config files}
+	ln -sf ${PWD}/.zshrc ${HOME}/.zshrc
