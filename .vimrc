@@ -16,7 +16,7 @@ Plugin 'unblevable/quick-scope'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'machakann/vim-sandwich'
+Plugin 'tpope/vim-surround'
 Plugin 'vimwiki/vimwiki'
 Plugin 'vim-airline/vim-airline'
 Plugin 'joshdick/onedark.vim'
@@ -25,6 +25,7 @@ Plugin 'DougBeney/pickachu'
 Plugin 'zxqfl/tabnine-vim'
 Plugin 'mcchrish/nnn.vim'
 Plugin 'ap/vim-css-color'
+Plugin 'dense-analysis/ale'
 "Plugin 'Valloric/YouCompleteMe'
 " }}}
 
@@ -35,6 +36,9 @@ filetype plugin indent on    " required
 " Set truecolor for onedark.vim
 set termguicolors
 " }}}
+
+" ALE
+let g:ale_linters = {'rust': ['analyzer']}
 
 " My options {{{1
 set expandtab
