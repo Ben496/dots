@@ -67,6 +67,9 @@ let g:gitgutter_enabled = 1
 let g:ycm_key_list_select_completion = ['<Down>'] " override tab for selecting completion (tabnine/youcompleteme)
 let g:ycm_key_list_previous_completion = ['<Up>'] " override tab for selecting previous completion (tabnine/youcompleteme)
 "let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" Remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
 " }}}
 
 " Custom Keybinds {{{1
