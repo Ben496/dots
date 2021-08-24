@@ -26,6 +26,7 @@ Plugin 'zxqfl/tabnine-vim'
 Plugin 'mcchrish/nnn.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'dense-analysis/ale'
+Plugin 'bluz71/vim-moonfly-colors'
 "Plugin 'Valloric/YouCompleteMe'
 " }}}
 
@@ -57,7 +58,7 @@ filetype plugin on " required for vimwiki
 syntax on
 let g:gruvbox_contrast_dark="hard"
 let g:gruvbox_contrast_light="hard"
-colorscheme gruvbox
+colorscheme moonfly
 set background=dark
 set cursorline
 set colorcolumn=80
