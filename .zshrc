@@ -29,6 +29,13 @@ fi
 setopt nosharehistory
 
 
+# Setup support for gnome-keyring
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+
+
 # Aliases
 alias ls="ls --color=auto"
 alias subl="/opt/sublime_text/sublime_text"
