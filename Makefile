@@ -1,7 +1,7 @@
 default:
 	${warn Specify an install target}
 
-install: install_i3 install_polybar symlink_alacritty symlink_vim symlink_nvim symlink_zsh
+install: install_i3 install_polybar symlink_awesomewm symlink_alacritty symlink_vim symlink_nvim symlink_zsh
 
 i3:
 	${info Rendering i3 config}
@@ -14,6 +14,10 @@ install_i3: i3
 	install -m 644 ${PWD}/.config/i3/stacked.sh ${HOME}/.config/i3/stacked.sh
 	install -m 644 ${PWD}/.config/i3/tabbed.sh ${HOME}/.config/i3/tabbed.sh
 	install -m 644 ${PWD}/.config/i3/toggle_touchpad.sh ${HOME}/.config/i3/toggle_touchpad.sh
+
+symlink_awesomewm:
+	${info Symlinking awesomewm config files}
+	ln -sf ${PWD}/.config/awesome ${HOME}/.config/awesome
 
 polybar:
 	${info Rendering polybar config}
