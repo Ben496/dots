@@ -593,6 +593,7 @@ autorunApps =
    "/usr/bin/gnome-keyring-daemon --start",
    -- Start light-locker
    "light-locker",
+   "numlockx on",
 }
 if autorun then
    for app = 1, #autorunApps do
