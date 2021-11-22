@@ -594,6 +594,7 @@ autorunApps =
    -- Start light-locker
    "light-locker",
    "numlockx on",
+   "flameshot",
 }
 if autorun then
    for app = 1, #autorunApps do
