@@ -510,9 +510,14 @@ awful.rules.rules = {
         }
       }, properties = { floating = true }},
 
-    -- Add titlebars to dialog clients
-    { rule_any = {type = { "dialog" }
+    -- Add titlebars to normal & dialog clients
+    { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = true }
+    },
+
+    -- Disable titlebars from steam
+    { rule_any = {class = { "Steam" }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
