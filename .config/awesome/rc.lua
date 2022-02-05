@@ -208,6 +208,8 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
 
+    local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
@@ -221,6 +223,10 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
+            batteryarc_widget({
+               show_current_level = true,
+               arc_thickness = 1,
+            }),
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
