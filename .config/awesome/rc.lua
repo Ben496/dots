@@ -226,6 +226,7 @@ awful.screen.connect_for_each_screen(function(s)
             batteryarc_widget({
                show_current_level = true,
                arc_thickness = 1,
+               enable_battery_warning = false,
             }),
             wibox.widget.systray(),
             mytextclock,
