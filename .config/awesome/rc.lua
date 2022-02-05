@@ -600,6 +600,9 @@ autorunApps =
    "light-locker",
    "numlockx on",
    "flameshot",
+   "xsetwacom --set 'Wacom Intuos PT M 2 Pen stylus' Area 0 0 21600 12150",
+   "xsetwacom --set 'Wacom Intuos PT M 2 Pen stylus' MapToOutput HEAD-0",
+
 }
 if autorun then
    for app = 1, #autorunApps do
